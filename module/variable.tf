@@ -20,3 +20,7 @@ variable "snet_prefixes" {
   description = "addressprefix"
     type        = list(string)
 }
+variable "env" {
+  description = "environment"
+    type        = string
+}
