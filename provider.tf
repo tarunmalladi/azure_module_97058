@@ -7,7 +7,13 @@ terraform {
   }
   
   required_version = "1.10.5"
-  backend "azurerm" {} 
+  backend "azurerm" {
+    resource_group_name   = "mybackend-rg"
+    storage_account_name  = "mybackendsa"
+    container_name        = "mybackendcontainer"
+    key                   = "devtfstate"
+    
+  } 
 }
 
 # Configure the Microsoft Azure Provider
